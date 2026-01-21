@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <!-- 문자 인코딩 설정: utf-8은 한글, 영문, 특수문자 등 모든 문자를 올바르게 표시할 수 있게 해줍니다 -->
+    <meta charset="utf-8">
+    <!-- IE(인터넷 익스플로러) 호환성 설정: IE가 최신 렌더링 모드로 페이지를 표시하도록 강제합니다 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 반응형 웹 디자인을 위한 뷰포트 설정: width=device-width는 기기의 너비에 맞추고, initial-scale=1은 초기 확대/축소 비율을 1로 설정합니다 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 웹페이지의 제목: 브라우저 탭에 표시되는 텍스트입니다 -->
+    <title>BX Guide</title>
+    <!-- 파비콘 설정: 브라우저 탭에 표시되는 작은 아이콘 이미지를 지정합니다 -->
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <!-- Bootstrap 주석: Bootstrap은 반응형 웹 디자인을 위한 CSS 프레임워크입니다 -->
+    <!-- Bootstrap -->
+    <!-- Bootstrap CSS 파일 연결: 웹페이지의 레이아웃과 스타일을 위한 Bootstrap 프레임워크를 불러옵니다 -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Ionicons 아이콘 폰트 연결: 전화, 이메일, 집 등의 아이콘을 사용하기 위한 아이콘 폰트 라이브러리입니다 -->
+    <link href="ionicons/css/ionicons.min.css" rel="stylesheet">
+    <!-- Animate CSS 연결: 요소에 애니메이션 효과를 추가하기 위한 CSS 라이브러리입니다 -->
+    <link href="css/animate.min.css" rel="stylesheet">
+    <!-- AOS(Animate On Scroll) CSS 연결: 스크롤할 때 요소가 나타나는 애니메이션 효과를 위한 라이브러리입니다 -->
+    <link href="css/aos.css" rel="stylesheet">
+    <!-- 메인 스타일시트 주석: 사용자 정의 CSS 파일입니다 -->
+    <!-- main style -->
+    <!-- 사용자 정의 CSS 파일 연결: 이 웹사이트의 고유한 스타일을 정의한 CSS 파일을 불러옵니다 -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- IE8 지원을 위한 HTML5 shim과 Respond.js 주석: 구형 브라우저에서도 HTML5 요소와 미디어 쿼리를 사용할 수 있게 해줍니다 -->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- 경고 주석: 파일 프로토콜(file://)로 열면 Respond.js가 작동하지 않습니다 -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!-- 조건부 주석: IE9 미만 버전에서만 실행되는 코드입니다. [if lt IE 9]는 "만약 IE 버전이 9보다 작다면"을 의미합니다 -->
+    <!--[if lt IE 9]>
+      HTML5 shiv 스크립트: 구형 IE에서 HTML5 태그(header, nav, section 등)를 인식할 수 있게 해줍니다
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      Respond.js 스크립트: 구형 IE에서 CSS 미디어 쿼리(반응형 디자인)를 작동하게 해줍니다
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    조건부 주석 종료
+    <![endif]-->
+    <!-- head 태그 종료 -->
+</head>
+
+<body>
+
+    <!-- 프리로더(로딩 화면) 주석: 페이지가 완전히 로드되기 전에 보여지는 로딩 애니메이션 영역입니다 -->
+    <!-- Preloader -->
+    <!-- 프리로더 컨테이너: id="preloader"로 JavaScript에서 이 요소를 제어할 수 있습니다 -->
+    <div id="preloader">
+        <!-- 상태 표시 영역: 로딩 상태를 보여주는 내부 컨테이너입니다 -->
+        <div id="status">
+            <!-- 빈 줄: 가독성을 위한 공백 줄입니다 -->
+
+            <!-- 프리로더 애니메이션 요소: aria-busy="true"는 접근성을 위한 속성으로, 로딩 중임을 스크린 리더에 알려줍니다 -->
+            <!-- aria-label은 스크린 리더가 읽을 텍스트를 지정합니다. role="progressbar"는 진행 표시줄 역할을 의미합니다 -->
+            <div class="preloader" aria-busy="true" aria-label="Loading, please wait." role="progressbar">
+            </div>
+            <!-- 빈 줄: 가독성을 위한 공백 줄입니다 -->
+
+            <!-- 상태 표시 영역 종료 -->
+        </div>
+        <!-- 프리로더 컨테이너 종료 -->
+    </div>
+    <!-- 프리로더 섹션 종료 주석 -->
+    <!-- ./Preloader -->
+
+    <!-- 헤더(상단 네비게이션) 주석: 웹페이지 상단의 메뉴 영역입니다 -->
+    <!-- header -->
+    <!-- 헤더 태그: class="navbar-fixed-top"는 Bootstrap 클래스로, 스크롤해도 상단에 고정되는 네비게이션 바를 만듭니다 -->
+    <header class="navbar-fixed-top">
+        <!-- nav 태그: 네비게이션 메뉴를 의미하는 시맨틱 태그입니다 -->
+        <nav>
+            <!-- ul 태그: 순서 없는 목록(unordered list)을 만듭니다. 메뉴 항목들을 나열할 때 사용합니다 -->
+            <ul>
+                <!-- li 태그: 목록 항목(list item)입니다. 각 메뉴 항목을 나타냅니다 -->
+                <!-- a 태그: 링크(anchor)를 만듭니다. href="#about"는 같은 페이지의 id="about"인 요소로 이동합니다 -->
+                <li><a href="./web_guide.html">Web Guide</a></li>
+                <!-- ul 태그 종료 -->
+            </ul>
+            <!-- nav 태그 종료 -->
+        </nav>
+        <!-- header 태그 종료 -->
+    </header>
+    <!-- 헤더 섹션 종료 주석 -->
+    <!-- ./header -->
+
+    <!-- 홈 섹션 주석: 메인 페이지의 첫 화면 영역입니다 -->
+    <!-- home -->
+    <!-- 홈 섹션 div: class="section"는 공통 섹션 스타일을 적용하고, id="home"은 이 섹션의 고유 식별자입니다 -->
+    <!-- data-stellar-background-ratio="0.5"는 스크롤 시 배경이 천천히 움직이는 패럴랙스 효과를 위한 속성입니다 -->
+    <div class="section" id="web_guide" data-stellar-background-ratio="0.5">
+        <!-- container 클래스: Bootstrap의 컨테이너로, 내용을 중앙 정렬하고 적절한 여백을 제공합니다 -->
+        <div class="container">
+            <!-- disply-table 클래스: CSS의 display: table 속성을 사용하여 수직 중앙 정렬을 구현합니다 -->
+            <div class="disply-table">
+                <!-- table-cell 클래스: display: table-cell을 사용하여 셀처럼 동작하게 만듭니다 -->
+                <!-- data-aos="fade-up"는 AOS 라이브러리 속성으로, 스크롤 시 위로 페이드인 애니메이션을 적용합니다 -->
+                <!-- data-aos-delay="0"는 애니메이션 지연 시간을 0초로 설정합니다 -->
+                <img src="./img/web-guide-img.jpg" alt="web-guide-img">
+                <!-- disply-table div 종료 -->
+            </div>
+            <!-- container div 종료 -->
+        </div>
+        <!-- 홈 섹션 div 종료 -->
+    </div>
+    <!-- 홈 섹션 종료 주석 -->
+    <!-- ./home -->
+
+
+    <!-- jQuery 라이브러리 주석: JavaScript 라이브러리입니다 -->
+    <!-- jQuery -->
+    <!-- jQuery 라이브러리 스크립트: DOM 조작, 이벤트 처리, AJAX 등을 쉽게 할 수 있게 해주는 JavaScript 라이브러리입니다 -->
+    <script src="js/jquery.js"></script>
+    <!-- 플러그인 주석: 추가 기능을 제공하는 스크립트들입니다 -->
+    <!--  plugins  -->
+    <!-- Bootstrap JavaScript 파일: Bootstrap의 인터랙티브 기능(드롭다운, 모달 등)을 작동하게 합니다 -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- plugins.js: 사용자 정의 플러그인이나 추가 기능을 포함하는 JavaScript 파일입니다 -->
+    <script src="js/plugins.js"></script>
+    <!-- AOS JavaScript 파일: 스크롤 애니메이션 효과를 작동하게 하는 라이브러리입니다 -->
+    <script src="js/aos.js"></script>
+    <!-- jQuery Form 플러그인: 폼 제출을 AJAX로 처리할 수 있게 해주는 jQuery 플러그인입니다 -->
+    <script src="js/jquery.form.js"></script>
+    <!-- jQuery Validate 플러그인: 폼 유효성 검사를 쉽게 할 수 있게 해주는 jQuery 플러그인입니다 -->
+    <script src="js/jquery.validate.min.js"></script>
+    <!-- Easy Pie Chart 플러그인: 원형 차트를 쉽게 만들 수 있게 해주는 jQuery 플러그인입니다 -->
+    <!-- 주석: 차트 제이쿼리 소스 -->
+    <script src="js/jquery.easypiechart.min.js"></script><!--차트 제이쿼리 소스-->
+    <!-- 빈 줄: 가독성을 위한 공백 줄입니다 -->
+
+    <!-- 메인 스크립트 주석: 사용자 정의 JavaScript 파일입니다 -->
+    <!--  main script  -->
+    <!-- custom.js: 이 웹사이트의 고유한 JavaScript 기능을 정의한 파일입니다 -->
+    <!-- 모든 라이브러리를 먼저 로드한 후에 이 파일을 로드하여, 라이브러리 기능을 사용할 수 있게 합니다 -->
+    <script src="js/custom.js"></script>
+    <!-- body 태그 종료 -->
+</body>
+
+</html>
