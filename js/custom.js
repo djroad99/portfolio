@@ -79,6 +79,11 @@ $(document).ready(function () {
         disable: 'mobile'
     });
 
+    // 모든 이미지와 리소스가 로딩된 후 AOS 위치를 재계산합니다.
+    $(window).on('load', function () {
+        AOS.refresh();
+    });
+
     //  isotope
     $('#projects').waitForImages(function () {
         var $container = $('.portfolio_container');
@@ -160,16 +165,16 @@ $(document).ready(function () {
 
 
     //skill - easyPieChart
-    $(window).scroll( function(){
+    $(window).scroll(function () {
 
         /* Check the location of each desired element */
-        $('.chart').each( function(i){
-    
+        $('.chart').each(function (i) {
+
             var bottom_of_object = $(this).offset().top + $(this).outerHeight();
             var bottom_of_window = $(window).scrollTop() + $(window).height();
-    
+
             /* If the object is completely visible in the window, fade it in */
-            if( bottom_of_window > bottom_of_object ){
+            if (bottom_of_window > bottom_of_object) {
 
                 $('.chart').easyPieChart({
                     barColor: '#7C83BF',  /*bar color변경하는곳*/
@@ -179,12 +184,13 @@ $(document).ready(function () {
                     lineWidth: 10,
                     size: 200,
                     animate: 2000,
-                    onStep: function(from, to, percent) {
-                        $(this.el).find('.percent').text(Math.round(percent)); }
+                    onStep: function (from, to, percent) {
+                        $(this.el).find('.percent').text(Math.round(percent));
+                    }
                 });
-             }
-        }); 
+            }
+        });
     });
-    
+
 
 });
