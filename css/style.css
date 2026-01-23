@@ -824,12 +824,13 @@ a.active {
 @media (max-width: 500px) {
     h1 {
         font-family: "Pretendard Variable", sans-serif;
-        font-size: 40px;
+        font-size: 24px;
         line-height: 50px;
     }
 
     h3 {
         text-align: center;
+        font-size: 24px;
     }
 
     h4 {
@@ -855,7 +856,7 @@ a.active {
 
     .skill {
         text-align: left;
-        margin: 0 0 40px 88px;
+        margin: 0 0 40px 72px;
     }
 
     #home,
